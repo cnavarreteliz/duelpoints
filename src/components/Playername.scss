@@ -1,0 +1,21 @@
+.playername-wrapper {
+  .user-box {
+    .user-title {
+      .player {
+        color: black;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+    }
+    .user-insert {
+      display: flex;
+      .insert-input {
+        flex-grow: 2;
+        margin-right: 10px;
+      }
+      .insert-button {
+        font-family: "Orbitron", sans-serif;
+      }
+    }
+  }
+}

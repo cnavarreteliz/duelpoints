@@ -1,0 +1,102 @@
+.duelpoints-wrapper {
+  height: 100vh;
+  background-image: url("/background.png");
+  font-family: "Orbitron", sans-serif;
+
+  .webpage-header {
+    background-color: none;
+    .webpage-header-navbar{
+      background: black;
+    }
+    .webpage-name {
+      color: white;
+      font-weight: bold;
+      font-size: 40px;
+      padding-top: 20px;
+      padding-left: 35px;
+    }
+  }
+
+  .userbox {
+    margin-top: 20px;
+  }
+
+  .game {
+    margin-top: 20px;
+    .game-box {
+      .game-structure {
+        display: flex;
+        align-items: center;
+        .game-points {
+          display: flex;
+          flex-grow: 8;
+          align-items: center;
+          .game-points-title {
+            color: black;
+            font-weight: bold;
+            margin-right: 5px;
+          }
+          .game-points-input {
+            flex-grow: 2;
+            height: 30px;
+            font-size: 18px;
+            font-family: "Orbitron", sans-serif;
+          }
+        }
+        .game-dice {
+          display: flex;
+          flex-grow: 2;
+          align-items: center;
+          .game-dice-title {
+            font-weight: bold;
+            color: black;
+          }
+          .game-dice-dice{
+            cursor: pointer;
+          }
+        }
+        .game-coin {
+          display: flex;
+          flex-grow: 2;
+          align-items: center;
+          .game-coin-title {
+            font-weight: bold;
+            color: black;
+            margin-right: 10px;
+          }
+          .game-coin-coin{
+            cursor: pointer;
+          }
+        }
+        .game-time {
+          display: flex;
+          flex-grow: 2;
+          align-items: center;
+          .game-time-title {
+            font-weight: bold;
+            color: black;
+            margin-right: 5px;
+          }
+          .game-time-timer{
+            margin-right: 8px;
+            width: 80px;
+          }
+          .game-reset-button{
+            .game-reset-button-title{
+              font-family: "Orbitron", sans-serif;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    color: white;
+    margin: 20px;
+    .footer-text {
+      color: white;
+      font-size: 15px;
+    }
+  }
+}
