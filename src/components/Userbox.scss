@@ -27,10 +27,11 @@
     }
     .interaction {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       .operation{
         margin-right: 10px;
-        width: 40px;
+        width: 50%;
+        height: 50px;
       }
     }
   }
