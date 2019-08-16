@@ -43,7 +43,9 @@ class Duelpoints extends React.Component {
     return (
       <div className="duelpoints-wrapper">
         <div className="webpage-header">
-            <a href="/" className="navbar-brand webpage-name">DuelPoints.xyz</a>
+          <a href="/" className="navbar-brand webpage-name">
+            DuelPoints.xyz
+          </a>
         </div>
 
         <section className="userbox">
@@ -107,51 +109,61 @@ class Duelpoints extends React.Component {
               <div className="box game-box">
                 <div className="columns game-structure">
                   <div className="column game-points">
-                    <h1 className="game-points-title"> POINTS </h1>
-                    <input
-                      className="input game-points-input"
-                      type="number"
-                      value={points}
-                      onChange={event =>
-                        this.setState({ points: event.target.value })
-                      }
-                    />
-                  </div>
-                  <div className="column game-dice">
-                    <h1 className="game-dice-title"> DICE </h1>
-                    <div className="game-dice-dice">
-                      <Dice />
+                    <div className="points">
+                      <h1 className="game-points-title"> POINTS </h1>
+                      <input
+                        className="input game-points-input"
+                        type="number"
+                        value={points}
+                        onChange={event =>
+                          this.setState({ points: event.target.value })
+                        }
+                      />
+                    </div>
+                    <div className="buttons add-points">
+                      <button className="button" onClick={points + 100}>+100</button>
+                      <button className="button">+500</button>
+                      <button className="button">+1000</button>
+                      <button className="button">+5000</button>
                     </div>
                   </div>
-                  <div className="column game-coin">
-                    <h1 className="game-coin-title"> COIN </h1>
-                    <div className="game-coin-coin">
-                      <Coin />
+                  <div className="column game-extras">
+                    <div className="game-dice">
+                      <h2 className="game-dice-title"> DICE </h2>
+                      <div className="game-dice-dice">
+                        <Dice />
+                      </div>
                     </div>
-                  </div>
-                  <div className="column game-time">
-                    <h1 className="game-time-title"> TIME </h1>
-                    <Timer
-                      formatValue={value =>
-                        `${value < 10 ? `0${value}` : value}`
-                      }
-                      onReset={this.resetGame}
-                    >
-                      {({ reset }) => (
-                        <React.Fragment>
-                          <div className="game-time-timer">
-                            <Timer.Minutes />:
-                            <Timer.Seconds />
-                          </div>
-                          <button
-                            className="button game-reset-button"
-                            onClick={reset}
-                          >
-                            <h1 className="game-reset-button-title">Reset</h1>
-                          </button>
-                        </React.Fragment>
-                      )}
-                    </Timer>
+                    <div className="game-coin">
+                      <h2 className="game-coin-title"> COIN </h2>
+                      <div className="game-coin-coin">
+                        <Coin />
+                      </div>
+                    </div>
+                    <div className="game-time">
+                      <h2 className="game-time-title"> TIME </h2>
+                      <Timer
+                        formatValue={value =>
+                          `${value < 10 ? `0${value}` : value}`
+                        }
+                        onReset={this.resetGame}
+                      >
+                        {({ reset }) => (
+                          <React.Fragment>
+                            <div className="game-time-timer">
+                              <Timer.Minutes />:
+                              <Timer.Seconds />
+                            </div>
+                            <button
+                              className="button game-reset-button"
+                              onClick={reset}
+                            >
+                              <h2 className="game-reset-button-title">Reset</h2>
+                            </button>
+                          </React.Fragment>
+                        )}
+                      </Timer>
+                    </div>
                   </div>
                 </div>
               </div>

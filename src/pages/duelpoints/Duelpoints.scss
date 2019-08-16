@@ -5,7 +5,7 @@
 
   .webpage-header {
     background-color: none;
-    .webpage-header-navbar{
+    .webpage-header-navbar {
       background: black;
     }
     .webpage-name {
@@ -26,10 +26,11 @@
     .game-box {
       .game-structure {
         display: flex;
+        flex-grow: 1;
         align-items: center;
         .game-points {
           display: flex;
-          flex-grow: 8;
+          flex-direction: column;
           align-items: center;
           .game-points-title {
             color: black;
@@ -43,54 +44,55 @@
             font-family: "Orbitron", sans-serif;
           }
         }
-        .game-dice {
+        .game-extras {
           display: flex;
-          flex-grow: 2;
-          align-items: center;
-          .game-dice-title {
-            font-weight: bold;
-            color: black;
+          justify-content: space-evenly;
+          flex-grow: 1;
+          .game-dice {
+            display: flex;
+            align-items: center;
+            .game-dice-title {
+              font-weight: bold;
+              color: black;
+            }
+            .game-dice-dice {
+              cursor: pointer;
+            }
           }
-          .game-dice-dice{
-            cursor: pointer;
+          .game-coin {
+            display: flex;
+            align-items: center;
+            .game-coin-title {
+              font-weight: bold;
+              color: black;
+              margin-right: 10px;
+            }
+            .game-coin-coin {
+              cursor: pointer;
+            }
           }
-        }
-        .game-coin {
-          display: flex;
-          flex-grow: 2;
-          align-items: center;
-          .game-coin-title {
-            font-weight: bold;
-            color: black;
-            margin-right: 10px;
-          }
-          .game-coin-coin{
-            cursor: pointer;
-          }
-        }
-        .game-time {
-          display: flex;
-          flex-grow: 2;
-          align-items: center;
-          .game-time-title {
-            font-weight: bold;
-            color: black;
-            margin-right: 5px;
-          }
-          .game-time-timer{
-            margin-right: 8px;
-            width: 80px;
-          }
-          .game-reset-button{
-            .game-reset-button-title{
-              font-family: "Orbitron", sans-serif;
+          .game-time {
+            display: flex;
+            align-items: center;
+            .game-time-title {
+              font-weight: bold;
+              color: black;
+              margin-right: 5px;
+            }
+            .game-time-timer {
+              margin-right: 8px;
+              width: 80px;
+            }
+            .game-reset-button {
+              .game-reset-button-title {
+                font-family: "Orbitron", sans-serif;
+              }
             }
           }
         }
       }
     }
   }
-
   .footer {
     color: white;
     margin: 20px;
